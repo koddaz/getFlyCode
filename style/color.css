@@ -15,4 +15,5 @@
 --text-default: #1e3a2f;         /* Deep Moss – readable body text */
 --text-muted: #4e6656;           /* Muted Moss – for secondary text */
 --border-default: #b2dfdb;       /* Subtle green-gray border */
+--content-background: #ffffff;   /* White – for content areas */
 }
