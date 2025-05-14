@@ -1,0 +1,72 @@
+/* Basic styling for the navigation menu */
+
+/* Styles the navigation bar container with a dark background, 
+     ensures content does not overflow, and spans the full width of the page */
+nav {
+       overflow: hidden;
+       width: 100%;
+       
+
+       color: var(--menu-item-text);
+       
+}
+
+/* Removes default list styling, sets margins and padding to zero, 
+     and arranges the list items in a horizontal row using flexbox */
+nav ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       flex-direction: row;
+}
+
+/* Ensures each list item takes up equal space and is displayed inline */
+nav ul li {
+       flex: 1;
+       display: inline-block;
+}
+
+/* Styles the links inside the list items with white text, centered alignment, 
+     padding for spacing, no underline, and a smooth background color transition on hover */
+nav ul li a {
+       display: block;
+       color: var(--menu-item-text);
+       text-align: center;
+       padding: 8px 8px;
+       border-top: 1px solid var(--border-default);
+       border-left: 1px solid var(--border-default);
+       border-right: 1px solid var(--border-default);
+       border-top-left-radius: 15px;
+       border-top-right-radius: 15px;
+       text-decoration: none;
+       transition: background-color 0.3s ease;
+}
+nav ul li a.active {
+    background-color: var(--menu-item-active);
+    color: var(--menu-item-active-text);
+    font-weight: bold;
+}
+
+/* Changes the background color of the links when hovered over */
+nav ul li a:hover {
+       background-color: var(--menu-item-hover);
+       color: var(--menu-item-hover-text);
+       font-weight: bold;
+}
+
+
+
+/* Responsive design for smaller screens */
+
+/* Adjusts the navigation menu layout for screens smaller than 768px, 
+     stacking the list items vertically and making them span the full width */
+@media (max-width: 768px) {
+       nav ul {
+                flex-direction: column;
+       }
+
+       nav ul li {
+                width: 100%;
+       }
+}

@@ -1,0 +1,18 @@
+:root {
+--menu-background: #e8f5e9;      /* Light mint – fresh background */
+--menu-item-text: #1e3a2f;       /* Deep moss – strong, readable text */
+--menu-item-hover-text: #14532d; 
+--menu-item-hover: #c8e6c9;      /* Soft mint – subtle hover highlight */
+--menu-item-active: #2ecc71;     /* Emerald – strong active highlight */
+--menu-border: #b2dfdb;          /* Soft green-gray – subtle separators */
+
+--status-success: #27ae60;       /* Strong Green */
+--status-warning: #f39c12;       /* Juicy Orange */
+--status-error: #e74c3c;         /* Vibrant Red */
+--status-info: #16a085;          /* Deep Sea Teal */
+
+--page-background: #f1f8f4;      /* Pale Green Mist – full background */
+--text-default: #1e3a2f;         /* Deep Moss – readable body text */
+--text-muted: #4e6656;           /* Muted Moss – for secondary text */
+--border-default: #b2dfdb;       /* Subtle green-gray border */
+}

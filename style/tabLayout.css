@@ -1,0 +1,31 @@
+
+
+
+.titleContainer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+}
+
+.cardContainer {
+     padding: 16px;
+     width: 80%;
+     max-width: 1200px;
+     height: auto;
+     background-color: var(--menu-background);
+     border: 1px solid var(--border-default);
+     border-bottom-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.tabContainer {
+
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-end;
+     height: auto;
+}
+
