@@ -1,6 +1,4 @@
 
-
-
 .titleContainer {
      display: flex;
      padding: 10px;
@@ -38,6 +36,17 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .projectsGrid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 15px;
+    }
+    
+    .presentationContainer {
+        max-width: 100%; /* Ensure cards don't overflow */
+    }
 }
 
 .presentationContainer {

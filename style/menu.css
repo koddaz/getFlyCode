@@ -5,14 +5,13 @@
 nav {
        overflow: hidden;
        width: 100%;
-       
-
        color: var(--menu-item-text);
-       
 }
 
-/* Removes default list styling, sets margins and padding to zero, 
-     and arranges the list items in a horizontal row using flexbox */
+nav.open {
+       max-height: 300px !important;
+}
+
 nav ul {
        list-style-type: none;
        margin: 0;
@@ -22,21 +21,34 @@ nav ul {
        justify-content: space-between;
 }
 
-/* Ensures each list item takes up equal space and is displayed inline */
 nav ul li {
        flex: 1;
        display: inline-block;
 }
+
 nav ul li a i {
-    margin-right: 8px; /* Adjust this value for more or less space */
+       margin-right: 16px;
+       flex-shrink: 0; /* Prevent icon from shrinking */
+       width: 16px; /* Fixed width for alignment */
+       text-align: center;
 }
-/* Styles the links inside the list items with white text, centered alignment, 
-     padding for spacing, no underline, and a smooth background color transition on hover */
+
+nav ul li a span {
+       flex-grow: 1; /* Take up remaining space */
+       text-align: center; /* Center the text */
+       margin-left: 0; /* Offset for the icon width */
+}
+
 nav ul li a {
-       display: block;
+       display: flex;
+       align-items: center;
+       justify-content: flex-start; /* Start content from left */
+       height: 40px;
+       /* Fixed height that never changes */
        color: var(--menu-item-text);
        text-align: center;
-       padding: 8px 8px;
+       padding: 0 16px;
+       /* Horizontal padding only */
        border-top: 1px solid var(--border-default);
        border-left: 1px solid var(--border-default);
        border-right: 1px solid var(--border-default);
@@ -44,14 +56,15 @@ nav ul li a {
        border-top-right-radius: 15px;
        text-decoration: none;
        transition: background-color 0.3s ease;
-}
-nav ul li a.active {
-    background-color: var(--menu-item-active);
-    color: var(--menu-item-active-text);
-    font-weight: bold;
+       position: relative; /* For absolute positioning if needed */
 }
 
-/* Changes the background color of the links when hovered over */
+nav ul li a.active {
+       background-color: var(--menu-item-active);
+       color: var(--menu-item-active-text);
+       font-weight: bold;
+}
+
 nav ul li a:hover {
        background-color: var(--menu-item-hover);
        color: var(--menu-item-hover-text);
@@ -60,16 +73,65 @@ nav ul li a:hover {
 
 
 
-/* Responsive design for smaller screens */
-
-/* Adjusts the navigation menu layout for screens smaller than 768px, 
-     stacking the list items vertically and making them span the full width */
 @media (max-width: 768px) {
+
+       /* Override conflicting styles */
+       nav ul li a {
+              height: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 16px;
+              border-radius: 0;
+              margin-left: 10%;
+              border: none;
+              border-top: 1px solid var(--menu-border);
+       }
+
+       /* First item shouldn't have a top border */
+       nav ul li:first-child a {
+              border-top: none;
+       }
+
+       /* Position the hamburger menu in top right */
+       .menuToggle {
+              display: block;
+              padding: 10px;
+              cursor: pointer;
+              font-size: 1.5rem;
+              margin-right: 10px;
+       }
+
+       /* Position nav as dropdown below header */
+       nav {
+              position: absolute;
+              top: 60px;
+              right: 0;
+              width: 100%;
+              background-color: var(--menu-background);
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+              z-index: 99;
+              max-height: 0;
+              /* Hidden by default */
+              overflow: hidden;
+              transition: max-height 0.3s ease;
+       }
+
+       nav.open {
+              max-height: 300px !important;
+              display: block !important;
+       }
+
        nav ul {
-                flex-direction: column;
+              flex-direction: column;
        }
 
        nav ul li {
-                width: 100%;
+              width: 100%;
+       }
+
+       .menuContainer {
+              flex: 0 0 auto;
+              justify-content: flex-end;
        }
 }
