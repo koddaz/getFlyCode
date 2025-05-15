@@ -19,6 +19,7 @@ nav ul {
        padding: 0;
        display: flex;
        flex-direction: row;
+       justify-content: space-between;
 }
 
 /* Ensures each list item takes up equal space and is displayed inline */
@@ -26,7 +27,9 @@ nav ul li {
        flex: 1;
        display: inline-block;
 }
-
+nav ul li a i {
+    margin-right: 8px; /* Adjust this value for more or less space */
+}
 /* Styles the links inside the list items with white text, centered alignment, 
      padding for spacing, no underline, and a smooth background color transition on hover */
 nav ul li a {

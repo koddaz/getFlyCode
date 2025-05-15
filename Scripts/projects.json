@@ -1,0 +1,20 @@
+[
+    {
+        "title": "MyCrave",
+        "description": "A mobile application to help users find a nearby restaurant based on their cravings.",
+        "image": "./img/logo.png",
+        "link": "#project-mycrave"
+    },
+    {
+        "title": "Meal Planner for Diabetics",
+        "description": "Web application that helps users plan meals while managing carbohydrate intake and insulin needs.",
+        "image": "./img/logo.png",
+        "link": "#project-meal-planner"
+    },
+    {
+        "title": "Exercise Impact Calculator",
+        "description": "Tool for estimating how different types of exercise affect blood glucose levels.",
+        "image": "./img/logo.png",
+        "link": "#project-exercise-calc"
+    }
+]
